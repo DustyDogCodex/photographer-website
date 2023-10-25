@@ -4,6 +4,11 @@ import { useState } from "react"
 import Masonry from '@mui/lab/Masonry'
 import Image from "next/image"
 import useMediaQuery from "@/hooks/useMediaQuery"
+import Earth1 from '/public/Earth1.jpg'
+import Space1 from '/public/Space1.jpg'
+import Space2 from '/public/Space2.jpg'
+import Space3 from '/public/Space3.jpg'
+import Space4 from '/public/Space4.jpg'
 
 function Page() {
     const [value, setValue] = useState<string>('all')
@@ -12,25 +17,26 @@ function Page() {
         setValue(newValue)
     }
 
+    /* images array with tags */
     const images = [
         {
-            image: '/Earth1.jpg',
+            image: Earth1,
             tag: 'Earth'
         },
         {
-            image: '/Space1.jpg',
+            image: Space1,
             tag: 'Space'
         },
         {
-            image: '/Space2.jpg',
+            image: Space2,
             tag: 'Space'
         },
         {
-            image: '/Space3.jpg',
+            image: Space3,
             tag: 'Space'
         },
         {
-            image: '/Space4.jpg',
+            image: Space4,
             tag: 'Space'
         }
     ]
@@ -52,9 +58,9 @@ function Page() {
                     aria-label="secondary tabs example"
                     className="my-5"
                 >
-                    <Tab value="all" label="All" />
-                    <Tab value="Space" label="Space" />
-                    <Tab value="Earth" label="Earth" />
+                    <Tab value="all" label="ALL" />
+                    <Tab value="Space" label="SPACE" />
+                    <Tab value="Earth" label="EARTH" />
                 </Tabs>
 
                 {/* Masonry grid for images */}
@@ -70,6 +76,7 @@ function Page() {
                                         alt="image"
                                         height={200}
                                         width={250}   
+                                        placeholder="blur"
                                     />
                                 ))
                             )
@@ -82,6 +89,7 @@ function Page() {
                                         alt="image"
                                         height={200}
                                         width={250}   
+                                        placeholder="blur"
                                     />
                                 )
                             )

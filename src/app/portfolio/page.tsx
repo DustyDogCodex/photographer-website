@@ -40,7 +40,7 @@ function Page() {
 
     return (
         <div className="flex min-h-screen flex-col items-center justify-between bg-black">
-            <div className="container pt-20 text-white flex flex-col items-center">
+            <div className="container pt-12 text-white flex flex-col items-center">
                 <h1 className="text-5xl text-center">PORTFOLIO</h1>
 
                 {/* Tabs for filtering categories */}
@@ -58,34 +58,36 @@ function Page() {
                 </Tabs>
 
                 {/* Masonry grid for images */}
-                <Masonry columns={ aboveSmallScreens ? 3 : 1 } spacing={2}>
-                    {value === 'all' 
-                        ?
-                        (
-                            images.map((pic, index) => (
-                                <Image 
-                                    key={index} 
-                                    src={pic.image}
-                                    alt="image"
-                                    height={200}
-                                    width={250}   
-                                />
-                            ))
-                        )
-                        :
-                        (
-                            images.filter(pic => pic.tag === value).map((pic,index) => 
-                                <Image 
-                                    key={index} 
-                                    src={pic.image}
-                                    alt="image"
-                                    height={200}
-                                    width={250}   
-                                />
+                <div className="overflow-auto w-full p-2">
+                    <Masonry columns={ aboveSmallScreens ? 3 : 1 } spacing={2}>
+                        {value === 'all' 
+                            ?
+                            (
+                                images.map((pic, index) => (
+                                    <Image 
+                                        key={index} 
+                                        src={pic.image}
+                                        alt="image"
+                                        height={200}
+                                        width={250}   
+                                    />
+                                ))
                             )
-                        )
-                    }
-                </Masonry>
+                            :
+                            (
+                                images.filter(pic => pic.tag === value).map((pic,index) => 
+                                    <Image 
+                                        key={index} 
+                                        src={pic.image}
+                                        alt="image"
+                                        height={200}
+                                        width={250}   
+                                    />
+                                )
+                            )
+                        }   
+                    </Masonry>
+                </div>
             </div>
         </div>
     )

@@ -40,7 +40,7 @@ function NavBar() {
                     className='flex items-center justify-center text-2xl md:text-3xl'
                 >  
                     <Link href={'/'}>
-                        SHREYA!
+                        AWESOME!
                     </Link>
                 </div>
 

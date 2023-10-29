@@ -4,19 +4,20 @@ function Hero() {
     return (
         <div>
             <Image 
-                src='/mountain.jpg'
+                src='/mountain.png'
                 alt=""
                 width={400}
                 height={400}
                 className="w-full h-full"
             />
             <Image 
-                src='/couple.jpg'
+                src='/couple.png'
                 alt=""
                 width={400}
                 height={400}
                 className="w-full h-full"
             />
+            <img src="/couple.png" alt="" />
         </div>
     )
 }

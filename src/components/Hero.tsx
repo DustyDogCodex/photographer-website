@@ -9,6 +9,7 @@ function Hero() {
                 width={400}
                 height={400}
                 className="w-full h-full"
+                unoptimized={true}
             />
             <Image 
                 src='/couple.png'
@@ -16,8 +17,8 @@ function Hero() {
                 width={400}
                 height={400}
                 className="w-full h-full"
+                unoptimized={true}
             />
-            <img src="/couple.png" alt="" />
         </div>
     )
 }

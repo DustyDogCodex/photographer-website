@@ -2,7 +2,7 @@ import Image from "next/image"
 
 function Hero() {
     return (
-        <div className="parallax-wrapper text-white pt-20 w-full min-h-screen">
+        <div className="parallax-wrapper text-white pt-20">
             {/* parallax images and text */}
             <header>
                 {/* background image */}
@@ -11,7 +11,7 @@ function Hero() {
                     alt=""
                     width={400}
                     height={400}
-                    className="w-full h-full absolute top-0 object-cover"
+                    className="background w-full h-full absolute top-0 object-cover -z-10"
                     unoptimized={true}
                 />
 
@@ -21,11 +21,11 @@ function Hero() {
                     alt=""
                     width={400}
                     height={400}
-                    className="w-full h-full absolute top-0 object-cover"
+                    className="foreground w-full h-full absolute top-0 object-cover -z-10"
                     unoptimized={true}
                 />
 
-                <h1 className="text-3xl">Awe Inspiring</h1>
+                <h1 className="text-6xl">Awe Inspiring</h1>
             </header>
 
             {/* placeholder text for testing parallax effect */}

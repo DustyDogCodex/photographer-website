@@ -1,15 +1,26 @@
+import Image from "next/image"
+
 type CardProps = {
     title: string,
-    tagLine: string,
-    image: string
+    tagLine: string
 }
 
-function Card({ title, tagLine, image }: CardProps) {
+function Card({ title, tagLine }: CardProps) {
     return (
-        <div className="h-60 w-40">
-            <h1>{title}</h1>
-            <p>{tagLine}</p>
-            <p>{image}</p>
+        <div className="h-80 w-64 relative odd:mt-20"> 
+            <Image 
+                src={`/${title.toLowerCase()}.jpg`}
+                alt={`${title} image`}
+                width={300}
+                height={300}
+                className="w-full h-full"            
+            />        
+
+            {/* overlay */}
+            <div className="absolute top-0 z-20">
+                <h1>{title}</h1>
+                <p>{tagLine}</p>
+            </div>
         </div>
     )
 }

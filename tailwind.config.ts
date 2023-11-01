@@ -8,9 +8,12 @@ const config: Config = {
   ],
   theme: {
     extend:{ 
-        colors: {
-            'black-smoke': 'linear-gradient(180deg, #ffffff 0%, #FFF 100%)'
-        },
+        backgroundImage: {
+            'portfolio': '/public/portfolio.jpg',
+            'title2': '/public/title2.jpg',
+            'title3': '/title3.jpg',
+            'title4': '/title4.jpg'
+        }
     }
   },
   plugins: [],

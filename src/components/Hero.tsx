@@ -4,23 +4,19 @@ import Card from "./Card"
 const cardContent = [
     {
         title: 'Portfolio',
-        tagLine: 'VIEW PORTFOLIO',
-        image: ''
+        tagLine: 'VIEW PORTFOLIO'
     },
     {
         title: 'title2',
         tagLine: 'XYZ',
-        image: ''
     },
     {
         title: 'title3',
         tagLine: 'ABC',
-        image: ''
     },
     {
         title: 'title4',
         tagLine: 'EFG',
-        image: ''
     }
 ]
 
@@ -57,13 +53,12 @@ function Hero() {
 
             {/* images redirecting to portfolio and other works etc */}
             <section className="px-40 bg-black h-[600px] flex justify-center items-center">
-                <div className="container grid grid-cols-4 gap-5">
+                <div className="container grid grid-cols-2 md:grid-cols-4 gap-5">
                     {cardContent.map((card,index) => 
                         <Card
                             key={index} 
                             title={card.title}
                             tagLine={card.tagLine}
-                            image={card.image}
                         />
                     )}
                 </div>

@@ -1,8 +1,32 @@
 import Image from "next/image"
+import Card from "./Card"
+
+const cardContent = [
+    {
+        title: 'Portfolio',
+        tagLine: 'VIEW PORTFOLIO',
+        image: ''
+    },
+    {
+        title: 'title2',
+        tagLine: 'XYZ',
+        image: ''
+    },
+    {
+        title: 'title3',
+        tagLine: 'ABC',
+        image: ''
+    },
+    {
+        title: 'title4',
+        tagLine: 'EFG',
+        image: ''
+    }
+]
 
 function Hero() {
     return (
-        <div className="parallax-wrapper text-white pt-20">
+        <div className="parallax-wrapper text-white w-full">
             {/* parallax images and text */}
             <header>
                 {/* background image */}
@@ -31,9 +55,18 @@ function Hero() {
                 <div className="absolute h-[150px] bottom-0 w-full bg-gradient-to-t from-black via-black/90 to-transparent" />
             </header>
 
-            {/* placeholder text for testing parallax effect */}
-            <section className="text-3xl px-40 bg-black">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque voluptatibus voluptate sapiente unde consequatur aut rerum fuga aspernatur maiores! Voluptatum, quos? Similique non, sapiente at odio ab fugiat nemo, doloremque iusto repellendus molestiae aliquid asperiores ipsa inventore. In vel dolor aspernatur earum sunt corporis dolores, praesentium quae unde, corrupti similique sit maxime nulla eaque, quis consectetur repudiandae nihil voluptatem expedita nemo minima porro? Corporis, repellat. Ut qui ab beatae distinctio id nulla veniam sint aspernatur nemo in accusamus pariatur, delectus velit labore culpa ratione rerum. Iusto ea veritatis nemo soluta quaerat voluptatem, deserunt, incidunt non itaque doloribus libero! Odio accusantium repellendus, neque suscipit necessitatibus, dignissimos illum nulla et laudantium quidem dicta aspernatur dolorum reprehenderit perferendis eveniet error maiores ea, nesciunt inventore quos rem? Quam, neque ab repudiandae nisi magni ex ea tempore vitae fugit sit commodi officia voluptates porro excepturi ipsam repellat culpa, deleniti sint consequatur. Aliquam omnis reprehenderit rerum culpa eius in modi harum, dolorum officia enim. Modi et magnam cupiditate dolore molestiae, temporibus, vel necessitatibus odio eveniet ipsum tenetur repellat vitae recusandae architecto aperiam placeat deserunt hic earum soluta voluptas aut est! Nulla maiores doloribus quisquam dolore, officia pariatur error at temporibus ab. Cum quasi ratione tenetur quisquam odio delectus nostrum eius odit? Unde voluptatum ut reprehenderit suscipit doloribus amet dicta deserunt eos eaque, illum earum quas. Sunt ad molestias delectus adipisci hic eum facilis similique nisi, quam, vero et placeat quidem quod reiciendis perferendis nemo laudantium quos, officiis asperiores? Deserunt eaque nostrum commodi, eligendi unde vero laudantium nulla expedita quis fugit dolorum veritatis similique? Accusantium sint excepturi modi corporis provident officiis soluta ad maxime ipsam quaerat impedit omnis ab itaque dolor rem cum magnam amet, alias natus. Sit nemo eos quasi amet tempore enim commodi repellendus. Unde molestiae doloribus aspernatur placeat odit qui nam repellat tempore dolor.
+            {/* images redirecting to portfolio and other works etc */}
+            <section className="px-40 bg-black h-[600px] flex justify-center items-center">
+                <div className="container grid grid-cols-4 gap-5">
+                    {cardContent.map((card,index) => 
+                        <Card
+                            key={index} 
+                            title={card.title}
+                            tagLine={card.tagLine}
+                            image={card.image}
+                        />
+                    )}
+                </div>
             </section>
         </div>
     )

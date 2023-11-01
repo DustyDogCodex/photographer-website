@@ -7,7 +7,7 @@ function Hero() {
             <header>
                 {/* background image */}
                 <Image 
-                    src='/mountain.png'
+                    src='/mountain3.png'
                     alt=""
                     width={400}
                     height={400}

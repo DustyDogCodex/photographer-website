@@ -1,6 +1,7 @@
 import Image from "next/image"
 import About from "./About"
 import CardGrid from "./CardGrid"
+import Footer from "./Footer"
 
 function Hero() {
     return (
@@ -35,6 +36,7 @@ function Hero() {
             
             <CardGrid />
             <About />
+            <Footer />
         </div>
     )
 }

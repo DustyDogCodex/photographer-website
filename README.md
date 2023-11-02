@@ -22,3 +22,7 @@ Image Credits:
   
 - Photo by <a href="https://unsplash.com/@ayumikubo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">ayumi kubo</a> on <a href="https://unsplash.com/photos/a-city-street-filled-with-lots-of-traffic-at-night-9GFlwKdYrto?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
   
+- Photo by <a href="https://unsplash.com/@beeford?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Brandon Erlinger-Ford</a> on <a href="https://unsplash.com/photos/person-holding-dslr-camera-jL8QFwnuOcQ?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+  
+- Photo by <a href="https://unsplash.com/@lucreative?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Luigi Estuye, LUCREATIVE®</a> on <a href="https://unsplash.com/photos/man-in-gray-long-sleeve-shirt-and-black-shorts-sitting-on-brown-wooden-bench-during-daytime-HVK4t3leM1I?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+  

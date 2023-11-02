@@ -3,8 +3,20 @@ import { Permanent_Marker, Inconsolata } from 'next/font/google'
 import './globals.css'
 import NavBar from '@/components/Navbar'
 
-const marker = Permanent_Marker({ subsets: ['latin'], display: 'swap', weight: '400' })
-const inconsolata = Inconsolata({ subsets: ['latin'], display: 'swap', weight: '400' })
+/* fonts being used */
+const marker = Permanent_Marker({ 
+    subsets: ['latin'], 
+    display: 'swap', 
+    weight: '400', 
+    variable: '--font-marker' 
+})
+
+const inconsolata = Inconsolata({ 
+    subsets: ['latin'], 
+    display: 'swap', 
+    weight: '400', 
+    variable: '--font-inconsolata' 
+})
 
 export const metadata: Metadata = {
   title: 'Photography Portfolio',
@@ -18,7 +30,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-        <body className={`${marker.className} ${inconsolata.className}`}>
+        <body className={`${marker.variable} ${inconsolata.variable}`}>
             <NavBar />
             {children}
         </body>

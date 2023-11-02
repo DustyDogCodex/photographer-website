@@ -8,11 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend:{ 
-        backgroundImage: {
-            'portfolio': '/public/portfolio.jpg',
-            'title2': '/public/title2.jpg',
-            'title3': '/title3.jpg',
-            'title4': '/title4.jpg'
+        fontFamily: {
+            'marker': ['var(--font-marker)'],
+            'inconsolata': ['var(--font-inconsolata)']
         }
     }
   },

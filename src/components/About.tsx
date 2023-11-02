@@ -1,12 +1,5 @@
 import Image from "next/image"
-
-const portfolioImages = [
-    "/Space1.jpg",
-    "/Space2.jpg",
-    "/Space3.jpg",
-    "/Space4.jpg",
-    "/Earth1.jpg",
-]
+import Link from "next/link"
 
 function About() {
     return (
@@ -28,7 +21,7 @@ function About() {
                     </p>
 
                     {/* collection of skewed images that redirect to portfolio page */}
-                    <div className="h-[700px] flex items-center justify-center relative border border-red-500">
+                    <div className="h-full md:h-[700px] flex items-center justify-center relative border border-red-500">
                         <Image
                             src='/Earth1.jpg'
                             alt=""
@@ -50,7 +43,7 @@ function About() {
                             alt=""
                             width={300}
                             height={300}
-                            className="w-96 h-64 object-cover absolute bottom-[10%] left-[25%] -rotate-12 hover:-translate-y-5 transition duration-300"
+                            className="w-96 h-64 object-cover absolute bottom-[10%] left-[25%] -rotate-12 hover:translate-y-10 transition duration-300"
                         />
 
                         <Image
@@ -58,9 +51,15 @@ function About() {
                             alt=""
                             width={300}
                             height={300}
-                            className="w-64 h-80 object-cover absolute bottom-[10%] left-[55%] rotate-12 hover:-translate-y-5 transition duration-300"
+                            className="w-64 h-80 object-cover absolute bottom-[10%] left-[55%] rotate-12 hover:translate-x-10 transition duration-300"
                         />
                     </div>
+
+                    <Link 
+                        href={'/portfolio'}
+                    >
+                        <h1 className="text-gray-400 text-xl text-center">View Portfolio</h1>
+                    </Link>
                 </div>
             </div>
         </div>

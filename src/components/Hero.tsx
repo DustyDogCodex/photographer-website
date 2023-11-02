@@ -28,7 +28,7 @@ function Hero() {
                     unoptimized={true}
                 />
 
-                <h1 className="text-6xl">Awe Inspiring</h1>
+                <h1 className="text-5xl md:text-8xl font-marker">Awe Inspiring</h1>
 
                 {/* black smokey effect at the bottom */}
                 <div className="absolute h-[150px] bottom-0 w-full bg-gradient-to-t from-black via-black/90 to-transparent" />

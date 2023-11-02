@@ -1,61 +1,45 @@
 'use client'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import useMediaQuery from '../hooks/useMediaQuery'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faX } from '@fortawesome/free-solid-svg-icons'
 import Link from 'next/link'
 
 function NavBar() {
-    //using state to identify the current page the user is browser
-    const [ currentPage, setCurrentPage ] = useState<string>('home')
-
     //using state to toggle navbar menu
     const [ menuToggled, setMenuToggled ] = useState<boolean>(false)
 
     //checking to see if window is above a small screen with custom hook
     const aboveSmallScreens: boolean = useMediaQuery("(min-width: 768px)")
 
-    //determining if navbar is at top of page or not.
-    const [ topOfPage, setTopOfPage ] = useState<boolean>(true)
-
-    useEffect(() => {
-        //using handleScroll to determine if user is browsing top section of the website
-        //this is done to control the background color of the navbar. If user scrolls down the website, bg color changes to red
-        const handleScroll = () => {
-            window.scrollY === 0 ? setTopOfPage(true) : setTopOfPage(false)
-        }
-        window.addEventListener('scroll', handleScroll)
-        return () => window.removeEventListener('scroll', handleScroll)
-    }, [])
-
     return (
         <nav
-            className={`${topOfPage ? "" : "bg-orange-500"} fixed top-0 z-40 w-full flex items-center justify-center text-white`}
+            className="fixed top-0 z-40 w-full flex items-center justify-center text-white"
         >
             <div
                 className='w-full flex items-center justify-between py-5 px-5 xl:w-4/5'
             >
-                {/* brand logo and name */}
-                <div
-                    className='flex items-center justify-center text-2xl md:text-3xl'
-                >  
-                    <Link href={'/'}>
-                        AWESOME!
-                    </Link>
-                </div>
-
                 {/* menu options */}
                 {aboveSmallScreens
                     ?
-                    <div className="flex justify-between gap-10 text-3xl">
-                        <Link href={'/about'}>
-                            About
-                        </Link>
-                        <Link href={'/portfolio'}>
+                    <div className="flex justify-between items-center w-full font-marker">
+                        <Link 
+                            href={'/portfolio'} 
+                            className='text-3xl'    
+                        >
                             Portfolio
                         </Link>
-                        <Link href={'/contact'}>
-                            Contact
+                        <Link 
+                            href={'/'}
+                            className='text-6xl'
+                        >
+                            AWESOME!
+                        </Link>
+                        <Link 
+                            href={'/contact'}
+                            className='text-3xl'
+                        >
+                            Get In Touch!
                         </Link>
                     </div>
                     :

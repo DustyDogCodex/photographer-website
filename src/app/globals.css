@@ -8,6 +8,7 @@
     overflow-x: hidden;
     perspective: 10px;
     height: 100vh;
+    width: 100vw;
 }
 
 header{

@@ -46,16 +46,14 @@ function Page() {
 
     return (
         <div className="flex min-h-screen flex-col items-center justify-between bg-black">
-            <div className="container pt-12 text-white flex flex-col items-center">
-                <h1 className="text-5xl text-center">PORTFOLIO</h1>
-
+            <div className="container pt-16 text-white flex flex-col items-center">
                 {/* Tabs for filtering categories */}
                 <Tabs
                     value={value}
                     onChange={handleChange}
                     textColor="inherit"
                     indicatorColor="primary"
-                    aria-label="secondary tabs example"
+                    aria-label="photo gallery"
                     className="my-5"
                 >
                     <Tab value="all" label="ALL" />

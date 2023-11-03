@@ -3,7 +3,7 @@ import Link from "next/link"
 
 function About() {
     return (
-        <div className="w-full">
+        <div className="w-full font-inconsolata">
             <Image 
                 src='/about-bg.jpg'
                 alt=""
